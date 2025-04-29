@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Selector Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #message {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>jQuery Selector Example</h1>
+  
+  <input type="text" id="inputBox" placeholder="Type something here">
+  <button id="changeBtn">Change Message</button>
+
+  <p id="message">This is a sample message.</p>
+
+  <script>
+    $(document).ready(function() {
+      $('#changeBtn').click(function() {
+        var newText = $('#inputBox').val();
+        $('#message').text(newText).css('color', 'green');
+      });
+    });
+  </script>
+
+</body>
+</html>

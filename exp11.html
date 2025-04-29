@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Effects Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 200px;
+      height: 100px;
+      background-color: coral;
+      margin: 20px 0;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>jQuery Effects Example</h2>
+
+  <button id="showBtn">Show Box</button>
+  <button id="hideBtn">Hide Box</button>
+  <button id="toggleBtn">Toggle Box</button>
+  <button id="fadeBtn">Fade Toggle</button>
+  <button id="slideBtn">Slide Toggle</button>
+
+  <div id="box"></div>
+
+  <script>
+    $(document).ready(function() {
+      $('#showBtn').click(function() {
+        $('#box').show();
+      });
+
+      $('#hideBtn').click(function() {
+        $('#box').hide();
+      });
+
+      $('#toggleBtn').click(function() {
+        $('#box').toggle();
+      });
+
+      $('#fadeBtn').click(function() {
+        $('#box').fadeToggle();
+      });
+
+      $('#slideBtn').click(function() {
+        $('#box').slideToggle();
+      });
+    });
+  </script>
+
+</body>
+</html>
